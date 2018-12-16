@@ -7,12 +7,11 @@ Zadania:
    - Model dla encji Country
 2. Dodać do powyższych informacje o relacjach.
 3. Wyświetlić wszystkie państwa wraz z ich kodami
-4. Wyświetlić wszystkie miasta z zadanego kraju wraz z ich regionami
+4. Znaleźć wszystkie państwa wraz z ich dwuliterowymi kodami bez pobierania innych danych
+4. Znaleźć nazwy wszystkich miast w zadanym regionie
 5. Napisać i przetestować zapytania w HQL realizujące następujące zadania:
-   - znalezienie nazw wszystkich miast w zadanym regionie
-   - znalezienie państw wraz z ich dwuliterowymi kodami bez pobierania innych danych
+   - znalezienie wszystkich miast z zadanego kraju wraz z ich regionami
    - znalezienie państwa o najmniejszej liczbie powiązanych miast
-   - znalezienie średniej ilośći miast powiązanych ze wszystkimi państwami
 6. Dodać miasto do dowolnego państwa
 7. Zmienić stolićę dowolnego państwa
 8. Usunąć dowolne miasto
