@@ -12,7 +12,7 @@ public class QueryCitiesExample {
     public static void main(String[] args) {
         try(SessionFactory factory = new Configuration().configure().buildSessionFactory();
             Session sess = factory.openSession()) {
-            Query<City> q = sess.createQuery("SELECT c FROM City c");
+            Query<City> q = sess.createQuery("SELECT c FROM City c WHERE c.country.name='France'");
             q.setMaxResults(10);
             q.stream().forEach(
                     city -> System.out.println(city.getId() + " " + city.getName() + " " + city.getCountry().getName()));
