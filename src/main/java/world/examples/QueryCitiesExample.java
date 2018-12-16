@@ -15,7 +15,7 @@ public class QueryCitiesExample {
             Query<City> q = sess.createQuery("SELECT c FROM City c");
             q.setMaxResults(10);
             q.stream().forEach(
-                    city -> System.out.println(city.getId() + " " + city.getName()));
+                    city -> System.out.println(city.getId() + " " + city.getName() + " " + city.getCountry().getName()));
         }
     }
 }

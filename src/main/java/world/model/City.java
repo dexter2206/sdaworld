@@ -9,21 +9,25 @@ public class City {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="ID")
-    private int id;
+    private Integer id;
 
     @Column(name="Name")
     private String name;
+
+    @ManyToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name="CountryCode")
+    private Country country;
 
     @Column(name="District")
     private String district;
 
     public City() {}
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -41,6 +45,14 @@ public class City {
 
     public void setDistrict(String district) {
         this.district = district;
+    }
+
+    public Country getCountry() {
+        return country;
+    }
+
+    public void setCountry(Country country) {
+        this.country = country;
     }
 }
 
