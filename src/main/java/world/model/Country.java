@@ -18,6 +18,10 @@ public class Country {
     @Column(name="Code2")
     private String code2;
 
+    @OneToOne()
+    @JoinColumn(name="Capital")
+    private City capital;
+
     public Country() {}
 
     public String getCode() {
