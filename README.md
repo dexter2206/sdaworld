@@ -19,11 +19,9 @@ Zadania:
 10. Utworzyć nowe państwo i dodać do niego jedno miasto - w charakterze stolicy
 11. Dodać do utworzonego państwa dwa nowe miasta.
 12. Utworzyć model dla CountryLanguage
-13. Powiązać CountryLanguage z encjami City i Country
+13. Po owiązać CountryLanguage z encjami City i Country
 13. Napisać i przetestować zapytania w HQL realizujące następujące zadania:
-   - znalezienie państwa o największej liczbie języków
-   - znalezienie średniej ilośći języków używanych we wszystkich państwach
    - znalezienie państw posiadających jeden używany język
-   - znalezienie państw posiadających jeden oficjalny język
    - znalezienie wszystkich państw, w których mówi się w zadanym języku
    - znalezienie wszystkich państw, w których zadany język jest urzędowy
+   - znalezienie państwa o największej liczbie języków

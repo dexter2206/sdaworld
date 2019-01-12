@@ -1,0 +1,19 @@
+package world.examples;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
+import world.model.Country;
+import world.model.CountryLanguage;
+
+public class FindCountryByLanguageDirect {
+    public static void main(String[] args) {
+        try(SessionFactory factory = new Configuration().configure().buildSessionFactory();
+            Session session = factory.openSession()) {
+            Query<Country> query = session.createQuery(
+            "SELECT cl.country FROM CountryLanguage cl WHERE cl.id.language='French'");
+            query.stream().forEach(c -> System.out.println(c.getName()));
+        }
+    }
+}

@@ -18,11 +18,11 @@ public class Country {
     @Column(name="Code2")
     private String code2;
 
-    @OneToOne()
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="Capital")
     private City capital;
 
-    @OneToMany(mappedBy="country", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy="country")
     private List<City> cities;
 
     public Country() {}
